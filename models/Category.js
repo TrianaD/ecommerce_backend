@@ -6,7 +6,7 @@ class Category extends Model {}
 
 Category.init(
   {
-    // define columns
+    // define columns: table arguments 
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -18,8 +18,10 @@ Category.init(
       allowNull: false
     }
   },
-  {
+  { //Options argument
+    // link to database connection
     sequelize,
+    // will not track timestamps
     timestamps: false,
     freezeTableName: true,
     underscored: true,
