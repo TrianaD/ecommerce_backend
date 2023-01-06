@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
     .then(tagData => res.json(tagData))
     .catch(err => {
       console.log(err);
-      res.status(500).json(err);
+      res.status(500).json({message: "select different value(s)"});;
     });
 
 
@@ -88,7 +88,7 @@ router.put('/:id', (req, res) => {
     })
     .catch(err => {
       console.log(err);
-      res.status(500).json(err);
+      res.status(500).json({message: "select different value(s)"});;
     });
 });
 
